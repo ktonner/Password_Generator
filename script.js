@@ -16,13 +16,18 @@ var specChar = confirm("Do you want special characters?")
 
 
 
-function generatePassword(length = numChar) {
+function generatePassword() {
   var num = '1234567890';
   var letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
   var spec = '?!#%/()+-,<=>@[]~&*.:;^[\\]';
 
   var all = num + letters + spec;
   var random = Math.floor(Math.random() * all.length);
+  var char = all.substring(random, random + 1)
+
+  for(var i = 0; i<numChar;i++){
+    return char
+  }
 }
 
 
