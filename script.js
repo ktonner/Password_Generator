@@ -2,10 +2,15 @@
 var generateBtn = document.querySelector("#generate");
 
 var numChar = prompt("How many characters would you like in your password?")
-if (numChar > 121) {
-  alert("The password can't be more than 121 characters.")
-  prompt("How many characters would you like in your password?")
-}
+
+// Number(numChar)
+
+// do{
+//   alert("The password can't be more than 121 characters.")
+//   prompt("How many characters would you like in your password?")
+// }
+// while (numChar > 121)
+
 var uppChar = confirm("Do you want upper case letters?")
 var specChar = confirm("Do you want special characters?")
 
