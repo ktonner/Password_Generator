@@ -1,44 +1,47 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+//Deciding length and complexity
 var numChar = prompt("How many characters would you like in your password?")
-
-// Number(numChar)
-
-// do{
-//   alert("The password can't be more than 121 characters.")
-//   prompt("How many characters would you like in your password?")
-// }
-// while (numChar > 121)
-
 var uppChar = confirm("Do you want upper case letters?")
 var specChar = confirm("Do you want special characters?")
 
 
+//Possible Characters
+var char = '1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ?!#%/()+-,<=>@[]~&*.:;^[\\]';
 
+//Declaring new password
+var newPass = ""
+
+//Generate password with loop
 function generatePassword() {
-  var num = '1234567890';
-  var letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-  var spec = '?!#%/()+-,<=>@[]~&*.:;^[\\]';
+  for(i=0; i<=numChar; i++){
+    newPass=newPass +
+  }
+ 
 
-  var all = num + letters + spec;
+  //Number generator
   var random = Math.floor(Math.random() * all.length);
   var char = all.substring(random, random + 1)
 
-  for(var i = 0; i<numChar;i++){
-    return char
-  }
-}
+  for(var i = 0; i <numChar; i++)
+{ var newPass = []
+  newPass.push(all[random])
+  console.log(newPass.toString())
 
+}}
+
+var passwordText = document.querySelector("#password");
 
 // Write password to the #password input
 function writePassword() {
+  console.log("Click")
   var password = generatePassword();
-  var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
+
+  passwordText.textContent = password;
 
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", generatePassword())
