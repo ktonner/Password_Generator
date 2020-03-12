@@ -18,10 +18,10 @@ generateBtn.addEventListener("click",function generatePassword() {
   console.log("Was clicked")
   for(i=0; i<=numChar; i++){
     if(uppChar == false){
-      char.slice(35,61)
+      char = char.slice(0,35) + char.slice(62)
     }
     else if (specChar == false){
-      char.slice(61)
+      char = char.slice(0,62)
     }
     console.log(char)
     newPass=newPass + char.charAt(Math.floor(Math.random() * char.length))
