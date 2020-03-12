@@ -14,15 +14,20 @@ var char = '1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ?!#%/(
 var newPass = ""
 
 //Generate password with loop
-function generatePassword() {
+generateBtn.addEventListener("click",function generatePassword() {
+  console.log("Was clicked")
   for(i=0; i<=numChar; i++){
+    if(uppChar == false){
+      char.slice(35,61)
+    }
+    else if (specChar == false){
+      char.slice(61)
+    }
+    console.log(char)
     newPass=newPass + char.charAt(Math.floor(Math.random() * char.length))
   }
+  console.log(newPass)
 
 //Put newPass in text box
-var passwordText = document.getElementById("password").textContent
-passwordText = newPass
-}
-
-//Event listener
-generateBtn.addEventListener("click", generatePassword())
+document.getElementById("password").textContent = newPass
+})
