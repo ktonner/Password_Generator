@@ -16,32 +16,13 @@ var newPass = ""
 //Generate password with loop
 function generatePassword() {
   for(i=0; i<=numChar; i++){
-    newPass=newPass +
+    newPass=newPass + char.charAt(Math.floor(Math.random() * char.length))
   }
- 
 
-  //Number generator
-  var random = Math.floor(Math.random() * all.length);
-  var char = all.substring(random, random + 1)
-
-  for(var i = 0; i <numChar; i++)
-{ var newPass = []
-  newPass.push(all[random])
-  console.log(newPass.toString())
-
-}}
-
-var passwordText = document.querySelector("#password");
-
-// Write password to the #password input
-function writePassword() {
-  console.log("Click")
-  var password = generatePassword();
-
-
-  passwordText.textContent = password;
-
+//Put newPass in text box
+var passwordText = document.getElementById("password").textContent
+passwordText = newPass
 }
 
-// Add event listener to generate button
+//Event listener
 generateBtn.addEventListener("click", generatePassword())
